@@ -7,6 +7,8 @@ TagManager:
   - Interact
   - Monster
   - Projectile
+  - GigaPlayer
+  - TinyPlayer
   layers:
   - Default
   - TransparentFX
