@@ -9,6 +9,11 @@ TagManager:
   - Projectile
   - GigaPlayer
   - TinyPlayer
+  - obji
+  - portal
+  - pa
+  - pb
+  - muro
   layers:
   - Default
   - TransparentFX
@@ -18,7 +23,7 @@ TagManager:
   - UI
   - Player
   - Projectile
-  - 
+  - obj
   - 
   - 
   - 
