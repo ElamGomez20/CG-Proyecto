@@ -9,11 +9,15 @@ TagManager:
   - Projectile
   - GigaPlayer
   - TinyPlayer
+<<<<<<< Updated upstream
   - obji
   - portal
   - pa
   - pb
   - muro
+=======
+  - Runas
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
