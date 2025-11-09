@@ -8,6 +8,8 @@ public class MagicFire : MonoBehaviour
     public float rangeFB = 15f;
     public float fireRate = 1f;
 
+    public AudioSource audioSource;
+
     private float nextFireTime = 0f;
 
     void Update()
@@ -35,6 +37,11 @@ public class MagicFire : MonoBehaviour
         }
         fireball.transform.rotation = Quaternion.LookRotation(dir);
         Destroy(fireball, 3f);
+
+        if (audioSource != null)
+        {
+            audioSource.Play();
+        }
     }
 
     GameObject FindClosestEnemy()
