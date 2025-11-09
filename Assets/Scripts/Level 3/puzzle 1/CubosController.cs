@@ -9,6 +9,9 @@ public class CubosNecesarios : MonoBehaviour
     private Renderer rend;
     public List<GameObject> Wall;
 
+    public AudioSource audioMoverPared;
+    private bool sonidoReproducido = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -43,6 +46,12 @@ public class CubosNecesarios : MonoBehaviour
 
         if (green && red)
         {
+            if (!sonidoReproducido && audioMoverPared != null)
+            {
+                audioMoverPared.Play();
+                sonidoReproducido = true;
+            }
+
             foreach (GameObject wall in Wall) 
             {
                 Vector3 targetPos = wall.transform.position + new Vector3(0, -5f, 0); 

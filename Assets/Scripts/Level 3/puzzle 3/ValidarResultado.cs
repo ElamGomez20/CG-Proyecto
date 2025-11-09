@@ -14,6 +14,8 @@ public class ValidarResultado : MonoBehaviour
     public TMP_InputField inputCodigo;
     public string resultado = "568";
 
+    public AudioSource audioMoverPared;
+
     void Update()
     {
        
@@ -21,6 +23,11 @@ public class ValidarResultado : MonoBehaviour
         {
             posicionFinal = pared.transform.position + new Vector3(0, altura, 0);
             subir = true;
+
+            if (audioMoverPared != null)
+            {
+                audioMoverPared.Play();
+            }
         }
 
         

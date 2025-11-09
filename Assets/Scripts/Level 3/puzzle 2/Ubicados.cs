@@ -11,6 +11,9 @@ public class Ubicados : MonoBehaviour
     public float posY = 2f;
     public float velocidad = 1f;
 
+    public AudioSource audioSubirMuros;
+    private bool sonidoReproducido = false;
+
     private Dictionary<GameObject, Vector3> posicionesIniciales = new Dictionary<GameObject, Vector3>();
 
     void Start()
@@ -22,7 +25,14 @@ public class Ubicados : MonoBehaviour
     }
 
     void Update()
+
     {
+        if (!sonidoReproducido && audioSubirMuros != null)
+        {
+            audioSubirMuros.Play();
+            sonidoReproducido = true;
+        }
+
         if (subirMuros)
         {
             bool todosListos = true;
