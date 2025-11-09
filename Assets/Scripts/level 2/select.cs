@@ -2,7 +2,6 @@
 
 public class select : MonoBehaviour
 {
-
     public Camera playerCamera;
     public float rayDistance = 12f;
     public LayerMask wallLayer;
@@ -15,8 +14,10 @@ public class select : MonoBehaviour
     public bool pick = false;
     private GameObject ultimoIzquierdo;
     private GameObject ultimoDerecho;
-    public AudioSource audioSource;   
-    public AudioClip sonidoColocar; 
+
+    // Solo el clip, sin AudioSource
+    public AudioClip sonidoColocar;
+    public float volumenSonido = 1f;
 
     void Update()
     {
@@ -64,7 +65,11 @@ public class select : MonoBehaviour
         rotacionFinal *= Quaternion.Euler(0f, rotacionExtraY, 0f);
 
         ultimo = Instantiate(prefab, posicionFinal, rotacionFinal);
-        if (audioSource != null && sonidoColocar != null)
-            audioSource.PlayOneShot(sonidoColocar);
+
+        // 🔊 Reproduce el sonido sin AudioSource
+        if (sonidoColocar != null)
+        {
+            AudioSource.PlayClipAtPoint(sonidoColocar, posicionFinal, volumenSonido);
+        }
     }
 }
