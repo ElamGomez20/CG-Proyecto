@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Monster
+  - muro
+  - Undefined
+  - pb
+  - pa
   layers:
   - Default
   - TransparentFX
