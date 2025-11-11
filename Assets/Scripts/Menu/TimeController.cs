@@ -1,13 +1,14 @@
 using UnityEngine;
-using TMPro;
+using UnityEngine.SceneManagement;
 
 public class TimeController : MonoBehaviour
 {
     public static TimeController instance;
-    public TextMeshProUGUI timeText;
-    private float elapsedTime;
 
-    void Awake()
+    private float elapsedTime;
+    private bool isRunning = true;
+
+    private void Awake()
     {
         if (instance == null)
         {
@@ -17,25 +18,46 @@ public class TimeController : MonoBehaviour
         else
         {
             Destroy(gameObject);
+            return;
+        }
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        isRunning = true;
+    }
+
+    private void Update()
+    {
+        if (isRunning)
+        {
+            elapsedTime += Time.deltaTime;
         }
     }
+
     public float GetElapsedTime()
     {
         return elapsedTime;
     }
 
-    void Update()
+    public void SetElapsedTime(float time)
     {
-        elapsedTime += Time.deltaTime;
-        int minutes = Mathf.FloorToInt(elapsedTime / 60f);
-        int seconds = Mathf.FloorToInt(elapsedTime % 60f);
-        if (timeText != null)
-            timeText.text = $"{minutes:00}:{seconds:00}";
+        elapsedTime = time;
     }
 
-    
-    public void SetElapsedTime(float value)
+    public void PauseTime()
     {
-        elapsedTime = value;
+        isRunning = false;
+    }
+
+    public void ResumeTime()
+    {
+        isRunning = true;
+    }
+
+    public void ResetTime()
+    {
+        elapsedTime = 0f;
     }
 }

@@ -1,4 +1,4 @@
-using System.IO;
+﻿using System.IO;
 using UnityEngine;
 
 [System.Serializable]
@@ -6,11 +6,13 @@ public class NombreJugadorData
 {
     public string nombreJugador;
     public float elapsedTime;
+    public int enemigosDerrotados;
 
-    public NombreJugadorData(string nombre, float tiempo)
+    public NombreJugadorData(string nombre, float tiempo, int enemigos)
     {
         nombreJugador = nombre;
         elapsedTime = tiempo;
+        enemigosDerrotados = enemigos;
     }
 }
 
@@ -19,6 +21,7 @@ public class Scoreboard : MonoBehaviour
     public static Scoreboard Instance;
     public string nombreJugadorActual;
     public float tiempoJugador;
+    public int enemigosDerrotados; 
     private string filePath;
 
     private void Awake()
@@ -41,7 +44,7 @@ public class Scoreboard : MonoBehaviour
     public void GuardarDatos()
     {
         float tiempoActual = TimeController.instance != null ? TimeController.instance.GetElapsedTime() : 0f;
-        NombreJugadorData data = new NombreJugadorData(nombreJugadorActual, tiempoActual);
+        NombreJugadorData data = new NombreJugadorData(nombreJugadorActual, tiempoActual, enemigosDerrotados);
         string json = JsonUtility.ToJson(data, true);
         File.WriteAllText(filePath, json);
     }
@@ -54,6 +57,7 @@ public class Scoreboard : MonoBehaviour
             NombreJugadorData data = JsonUtility.FromJson<NombreJugadorData>(json);
             nombreJugadorActual = data.nombreJugador;
             tiempoJugador = data.elapsedTime;
+            enemigosDerrotados = data.enemigosDerrotados;
 
             if (TimeController.instance != null)
                 TimeController.instance.SetElapsedTime(tiempoJugador);
@@ -62,6 +66,7 @@ public class Scoreboard : MonoBehaviour
         {
             nombreJugadorActual = "";
             tiempoJugador = 0f;
+            enemigosDerrotados = 0;
         }
     }
 }

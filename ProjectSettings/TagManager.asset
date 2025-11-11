@@ -9,6 +9,11 @@ TagManager:
   - Undefined
   - pb
   - pa
+  - obji
+  - Water
+  - Runas
+  - GigaPlayer
+  - TinyPlayer
   layers:
   - Default
   - TransparentFX

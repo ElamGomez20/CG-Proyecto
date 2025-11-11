@@ -16,6 +16,12 @@ public class FireBall : MonoBehaviour
         {
             Destroy(other.gameObject);
             Destroy(gameObject);
+
+            if (Scoreboard.Instance != null)
+            {
+                Scoreboard.Instance.enemigosDerrotados++;
+                Scoreboard.Instance.GuardarDatos(); 
+            }
         }
     }
 }

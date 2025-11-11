@@ -5,7 +5,6 @@ public class Damage : MonoBehaviour
 {
     public Material healthMaterial;
     public float monsterDamage = 1;
-    public float Health = 1;
     private float damageAmount;
     private float currentRemoveSegments;
 
@@ -27,14 +26,6 @@ public class Damage : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Heal"))
-        {
-            currentRemoveSegments += (damageAmount - Health);
-            healthMaterial.SetFloat("_RemoveSegments", currentRemoveSegments);
-        }
-    }
 
     private void HealtController()
     {
