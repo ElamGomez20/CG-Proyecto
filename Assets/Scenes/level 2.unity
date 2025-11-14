@@ -62505,11 +62505,15 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 905725732775540681, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.93769
+      objectReference: {fileID: 0}
     - target: {fileID: 2439285144873850215, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_text
-      value: "Ahora est\xE1s en la Cueva Galar. Las paredes verdes te ayudar\xE1n
-        a invocar portales (solo los podr\xE1s poner ah\xED). Usa tu nuevo b\xE1culo;
-        a trav\xE9s de los clics podr\xE1s colocar los portales.Suerte!"
+      value: "Ahora est\xE1s en la Cueva Galar.(Recoge el baculo con \"E\") Las paredes
+        verdes te ayudar\xE1n a invocar portales (solo los podr\xE1s poner ah\xED).
+        Usa tu nuevo b\xE1culo; a trav\xE9s de los clics podr\xE1s colocar los portales.Suerte!"
       objectReference: {fileID: 0}
     - target: {fileID: 3105080771970230309, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_Name
