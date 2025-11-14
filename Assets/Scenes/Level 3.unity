@@ -3709,6 +3709,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1339306383}
+  - {fileID: 926228603}
   - {fileID: 1536594218}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9243,6 +9244,73 @@ CapsuleCollider:
   m_Height: 0.09
   m_Direction: 2
   m_Center: {x: -0.00023458665, y: -0.0014646057, z: -0.0019286198}
+--- !u!1 &926228602
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 926228603}
+  - component: {fileID: 926228605}
+  - component: {fileID: 926228604}
+  m_Layer: 0
+  m_Name: puzzles 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &926228603
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926228602}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -16.609985, y: -2.3559437, z: -5.231842}
+  m_LocalScale: {x: 37.63703, y: 11.255543, z: 34.39924}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 366716400}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &926228604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926228602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 526e408ce11efbc4e891d8ad18bbf21f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnScript: {fileID: 366716404}
+--- !u!65 &926228605
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926228602}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &931307492 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3928036600788308211, guid: 71a33d5d66caa3643a48a68d871e04b1, type: 3}
@@ -14553,22 +14621,34 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 315522956242452891, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1348.0554
+      objectReference: {fileID: 0}
+    - target: {fileID: 315522956242452891, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1122.0553
+      objectReference: {fileID: 0}
+    - target: {fileID: 315522956242452891, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1368.0645
+      objectReference: {fileID: 0}
+    - target: {fileID: 315522956242452891, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_LocalPosition.x
       value: -26.74
       objectReference: {fileID: 0}
     - target: {fileID: 315522956242452891, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 140.8
+      value: 142.54
       objectReference: {fileID: 0}
     - target: {fileID: 315522956242452891, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 65.86
+      value: 65.84
       objectReference: {fileID: 0}
     - target: {fileID: 727735403008369838, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_text
       value: "Ya casi est\xE1s. Esta es la llanura Tony Tony; se caracteriza por
-        dar a la gente la capacidad de cambiar de tama\xF1o (pruebacon los clicks).
-        \xDAsalo a tu favor.\noculta con \"O\""
+        dar a la gente la capacidad de cambiar de tama\xF1o (prueba con los clicks).
+        \xDAsalo a tu favor.\n"
       objectReference: {fileID: 0}
     - target: {fileID: 1093010045465025313, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_IsActive
