@@ -26900,6 +26900,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2067548370451882144, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 2067548370451882144, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 230
+      objectReference: {fileID: 0}
     - target: {fileID: 2468990299067567878, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_LocalScale.x
       value: 1422.384
@@ -26962,18 +26970,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3866941498179015047, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_text
-      value: "Bienvenido a las llanuras esquel\xE9ticas. Aqu\xED deber\xE1s matar
-        los suficientes fantasmas para que los ca\xF1ones se activen. Con W, A, S,
-        D te mueves y, para disparar, no te preocupes: tu bast\xF3n lo har\xE1 por
-        ti.busca los ca\xF1ones para acceder a la cueva.\n"
+      value: "Bienvenido a las llanuras esquel\xE9ticas. Aqu\xED deber\xE1s evitar
+        y derrotar fantasmas. para que los ca\xF1ones se activen.\n\nCon W, A, S,
+        D te mueves, con SHIFT corres y, para disparar, no te preocupes: tu bast\xF3n
+        lo har\xE1 por ti. Busca los ca\xF1ones para acceder a la cueva Final y pasar
+        de Nivel.\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3866941498179015047, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
+      propertyPath: m_fontSize
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3866941498179015047, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
+      propertyPath: m_margin.z
+      value: -238.0116
+      objectReference: {fileID: 0}
+    - target: {fileID: 3866941498179015047, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3866941498179015047, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4145647324611199995, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5514554595159968198, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -126
+      objectReference: {fileID: 0}
+    - target: {fileID: 5514554595159968198, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 114
+      value: 166
       objectReference: {fileID: 0}
     - target: {fileID: 7335644474723095060, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_IsActive
@@ -32046,7 +32075,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthMaterial: {fileID: 2100000, guid: 4db3a38f2cc18e048b84043b7aaeefc6, type: 2}
-  monsterDamage: 1
+  monsterDamage: 0
 --- !u!4 &2093767804 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2067636967180699475, guid: afbd1d9de63c51041ad97fad62e1fe5b, type: 3}
@@ -32855,6 +32884,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2926656932608781498, guid: d2613a32621a6084e9cacaafcc15f565, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4374124777376713175, guid: d2613a32621a6084e9cacaafcc15f565, type: 3}
       propertyPath: m_Pivot.x
       value: 0
