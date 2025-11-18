@@ -17,11 +17,17 @@ public class MovementPlayer : MonoBehaviour
     float turnSmoothVelocity;
     bool isGrounded;
 
+    // Checkpoint
+    private Vector3 respawnPosition;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
+
+        // Initial respawn position is the starting position of the player
+        respawnPosition = transform.position;
     }
 
     void Update()
@@ -71,5 +77,20 @@ public class MovementPlayer : MonoBehaviour
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             rb.MovePosition(rb.position + moveDir.normalized * currentSpeed * Time.fixedDeltaTime);
         }
+    }
+
+    // Called by checkpoints
+    public void SetCheckpoint(Vector3 newPosition)
+    {
+        respawnPosition = newPosition;
+    }
+
+    // Called when player "dies"
+    public void RespawnAtCheckpoint()
+    {
+        // Reset velocity
+        rb.linearVelocity = Vector3.zero;
+        // Teleport player to last checkpoint
+        transform.position = respawnPosition;
     }
 }

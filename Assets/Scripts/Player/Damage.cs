@@ -1,17 +1,22 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Damage : MonoBehaviour
 {
     public Material healthMaterial;
-    public float monsterDamage = 1;
+    public float monsterDamage = 1f;
+
+    // Values for the health bar
+    public float initialDamageValue = 0.02f;
+    public float maxDamageValue = 3f;
+
+    public MovementPlayer player;
+
     private float damageAmount;
     private float currentRemoveSegments;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        currentRemoveSegments = 0.02f;
+        currentRemoveSegments = initialDamageValue;
         healthMaterial.SetFloat("_RemoveSegments", currentRemoveSegments);
     }
 
@@ -22,17 +27,23 @@ public class Damage : MonoBehaviour
             currentRemoveSegments += (damageAmount + monsterDamage);
             healthMaterial.SetFloat("_RemoveSegments", currentRemoveSegments);
 
-            HealtController();
+            HealthController();
         }
     }
 
-
-    private void HealtController()
+    private void HealthController()
     {
-        if (healthMaterial.GetFloat("_RemoveSegments") >= 3)
+        if (healthMaterial.GetFloat("_RemoveSegments") >= maxDamageValue)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            // Player "dies"
+            if (player != null)
+            {
+                player.RespawnAtCheckpoint();
+            }
+
+            // Reset health bar
+            currentRemoveSegments = initialDamageValue;
+            healthMaterial.SetFloat("_RemoveSegments", currentRemoveSegments);
         }
     }
-   
 }
