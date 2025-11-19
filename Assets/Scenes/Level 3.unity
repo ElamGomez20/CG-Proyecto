@@ -8372,6 +8372,54 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2694321040201123287, guid: d2613a32621a6084e9cacaafcc15f565, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 2694321040201123287, guid: d2613a32621a6084e9cacaafcc15f565, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.41256
+      objectReference: {fileID: 0}
+    - target: {fileID: 2694321040201123287, guid: d2613a32621a6084e9cacaafcc15f565, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.509434
+      objectReference: {fileID: 0}
+    - target: {fileID: 2694321040201123287, guid: d2613a32621a6084e9cacaafcc15f565, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -504.24445
+      objectReference: {fileID: 0}
+    - target: {fileID: 2694321040201123287, guid: d2613a32621a6084e9cacaafcc15f565, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 250.7367
+      objectReference: {fileID: 0}
+    - target: {fileID: 2694321040201123287, guid: d2613a32621a6084e9cacaafcc15f565, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4144932476779595286, guid: d2613a32621a6084e9cacaafcc15f565, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 4144932476779595286, guid: d2613a32621a6084e9cacaafcc15f565, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 4144932476779595286, guid: d2613a32621a6084e9cacaafcc15f565, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 4144932476779595286, guid: d2613a32621a6084e9cacaafcc15f565, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -504
+      objectReference: {fileID: 0}
+    - target: {fileID: 4144932476779595286, guid: d2613a32621a6084e9cacaafcc15f565, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 254
+      objectReference: {fileID: 0}
+    - target: {fileID: 4144932476779595286, guid: d2613a32621a6084e9cacaafcc15f565, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4374124777376713175, guid: d2613a32621a6084e9cacaafcc15f565, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -9676,15 +9724,20 @@ PrefabInstance:
     - target: {fileID: 727735403008369838, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_text
       value: "Resuelve la operaci\xF3n matem\xE1tica y pon la respuesta en el panel
-        derecho"
+        a la derecha (Cambia tu tama\xF1o para alcanzar el panel).\n\nRealiza el
+        parkour y recorre el laberinto para finalizar El juego."
       objectReference: {fileID: 0}
     - target: {fileID: 727735403008369838, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_fontSize
-      value: 40
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 727735403008369838, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
+      propertyPath: m_margin.y
+      value: 21.324615
       objectReference: {fileID: 0}
     - target: {fileID: 727735403008369838, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_fontSizeBase
-      value: 40
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 727735403008369838, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_HorizontalAlignment
@@ -9708,7 +9761,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2305469512630765898, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 125
+      value: 93
       objectReference: {fileID: 0}
     - target: {fileID: 3105080771970230309, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_Name
@@ -9720,11 +9773,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3273093113949300846, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 3273093113949300846, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 230
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 3657939852966467905, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9948,33 +10001,49 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 315522956242452891, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 142.54
+      value: 140.53
       objectReference: {fileID: 0}
     - target: {fileID: 315522956242452891, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 68.6
+      value: 68.62
       objectReference: {fileID: 0}
     - target: {fileID: 727735403008369838, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_text
-      value: 'Hazte Gigante y pues mueve las piedras
-
-'
+      value: "Conviertete en gigante y mueve las piedras hasta los puntos azules,
+        as\xED desbloquear\xE1s el siguiente desaf\xEDo.\n\nPtt: Cuidado con los
+        Fantasmas"
       objectReference: {fileID: 0}
     - target: {fileID: 727735403008369838, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_fontSize
-      value: 50
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 727735403008369838, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
+      propertyPath: m_margin.x
+      value: -193.59589
       objectReference: {fileID: 0}
     - target: {fileID: 727735403008369838, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_fontSizeBase
-      value: 50
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 727735403008369838, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 727735403008369838, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1093010045465025313, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2305469512630765898, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 98
+      objectReference: {fileID: 0}
+    - target: {fileID: 2305469512630765898, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 197
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3105080771970230309, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_Name
@@ -9986,11 +10055,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3273093113949300846, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 3273093113949300846, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 230
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 3657939852966467905, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15628,17 +15697,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 727735403008369838, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_text
-      value: "Ya casi est\xE1s. Esta es la llanura Tony Tony; se caracteriza por
-        dar a la gente la capacidad de cambiar de tama\xF1o (prueba con los clicks).
-        \xDAsalo a tu favor.\n"
+      value: "Bienvenido a la llanura Tony Tony. Aqu\xED tienes el poder de Hacerte
+        grande o peque\xF1o usando los Clicks de tu Mouse.\n\nTu primer desaf\xEDo
+        es replicar el Puzzle que ves en la pared frente a ti saltando sobre las
+        placas, las cuales cambiar\xE1n de verde a rojo y viceversa."
       objectReference: {fileID: 0}
     - target: {fileID: 727735403008369838, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_fontSize
-      value: 40
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 727735403008369838, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
+      propertyPath: m_margin.z
+      value: 157.1369
       objectReference: {fileID: 0}
     - target: {fileID: 727735403008369838, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_fontSizeBase
-      value: 40
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 727735403008369838, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_HorizontalAlignment
@@ -15658,11 +15732,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2305469512630765898, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000023842
+      value: 87
       objectReference: {fileID: 0}
     - target: {fileID: 2305469512630765898, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 104
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 3105080771970230309, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_Name
@@ -15674,11 +15748,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3273093113949300846, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 3273093113949300846, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 230
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 3657939852966467905, guid: d7116ad386c69a04ab3caa03da0ad317, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19718,67 +19792,6 @@ Transform:
   - {fileID: 286450034}
   m_Father: {fileID: 435568721}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1807321506
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 48582086249263853, guid: 0cf17c897daca14478f31d54459ecdf3, type: 3}
-      propertyPath: m_Name
-      value: inventory
-      objectReference: {fileID: 0}
-    - target: {fileID: 48582086249263853, guid: 0cf17c897daca14478f31d54459ecdf3, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7627920754557142803, guid: 0cf17c897daca14478f31d54459ecdf3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 876.7481
-      objectReference: {fileID: 0}
-    - target: {fileID: 7627920754557142803, guid: 0cf17c897daca14478f31d54459ecdf3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.0170949
-      objectReference: {fileID: 0}
-    - target: {fileID: 7627920754557142803, guid: 0cf17c897daca14478f31d54459ecdf3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 489.10526
-      objectReference: {fileID: 0}
-    - target: {fileID: 7627920754557142803, guid: 0cf17c897daca14478f31d54459ecdf3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7627920754557142803, guid: 0cf17c897daca14478f31d54459ecdf3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7627920754557142803, guid: 0cf17c897daca14478f31d54459ecdf3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7627920754557142803, guid: 0cf17c897daca14478f31d54459ecdf3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7627920754557142803, guid: 0cf17c897daca14478f31d54459ecdf3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7627920754557142803, guid: 0cf17c897daca14478f31d54459ecdf3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7627920754557142803, guid: 0cf17c897daca14478f31d54459ecdf3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0cf17c897daca14478f31d54459ecdf3, type: 3}
 --- !u!1 &1814870115
 GameObject:
   m_ObjectHideFlags: 0
@@ -23362,7 +23375,6 @@ SceneRoots:
   - {fileID: 418065553}
   - {fileID: 1273471357}
   - {fileID: 1529101144}
-  - {fileID: 1807321506}
   - {fileID: 1437109435}
   - {fileID: 965703247}
   - {fileID: 957728552}
