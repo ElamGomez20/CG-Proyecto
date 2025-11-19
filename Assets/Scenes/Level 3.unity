@@ -19525,7 +19525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 563e6f121f584bf4fafe38abd2972475, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panelFinal: {fileID: 1881278195}
+  panelFinal: {fileID: 1225680934}
   txtTitulo: {fileID: 1219542478}
   txtNombre: {fileID: 726251362}
   txtTiempo: {fileID: 2075678119}
