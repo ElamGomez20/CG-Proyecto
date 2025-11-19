@@ -1,4 +1,3 @@
-using System.Threading;
 using UnityEngine;
 
 public class MagicFire : MonoBehaviour
@@ -28,14 +27,19 @@ public class MagicFire : MonoBehaviour
     void Shoot(GameObject target)
     {
         GameObject fireball = Instantiate(FireBall, transform.position, Quaternion.identity);
+
         Vector3 dir = (target.transform.position - transform.position).normalized;
+
         Rigidbody rb = fireball.GetComponent<Rigidbody>();
         if (rb != null)
         {
             rb.useGravity = false;
+            // Si en tu proyecto usas linearVelocity, mantengo este:
             rb.linearVelocity = dir * speedFB;
         }
+
         fireball.transform.rotation = Quaternion.LookRotation(dir);
+
         Destroy(fireball, 3f);
 
         if (audioSource != null)
@@ -46,19 +50,22 @@ public class MagicFire : MonoBehaviour
 
     GameObject FindClosestEnemy()
     {
-        GameObject[] Monsters = GameObject.FindGameObjectsWithTag("Monster");
+        GameObject[] monsters = GameObject.FindGameObjectsWithTag("Monster");
         GameObject closest = null;
         float minDist = rangeFB;
 
-        foreach (GameObject Monster in Monsters)
+        foreach (GameObject monster in monsters)
         {
-            float dist = Vector3.Distance(transform.position, Monster.transform.position);
+            float dist = Vector3.Distance(transform.position, monster.transform.position);
             if (dist < minDist)
             {
                 minDist = dist;
-                closest = Monster;
+                closest = monster;
             }
         }
+
         return closest;
     }
 }
+
+
