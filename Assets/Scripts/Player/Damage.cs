@@ -1,38 +1,78 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Damage : MonoBehaviour
 {
     public Material healthMaterial;
-    public float monsterDamage = 1;
+    public float monsterDamage = 1f;
+
+    // Valores de la barra de vida
+    public float initialDamageValue = 0.02f;
+    public float maxDamageValue = 3f;
+
+    public MovementPlayer player;
+
     private float damageAmount;
     private float currentRemoveSegments;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        currentRemoveSegments = 0.02f;
+        currentRemoveSegments = initialDamageValue;
         healthMaterial.SetFloat("_RemoveSegments", currentRemoveSegments);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Monster"))
+        GameObject other = collision.gameObject;
+
+        // Log para probar colisiones
+        Debug.Log("OnCollisionEnter con: " + other.name + " | Tag: " + other.tag);
+
+        // Daño progresivo por fantasmas
+        if (other.CompareTag("Monster"))
         {
             currentRemoveSegments += (damageAmount + monsterDamage);
             healthMaterial.SetFloat("_RemoveSegments", currentRemoveSegments);
 
-            HealtController();
+            HealthController();
         }
-    }
-
-
-    private void HealtController()
-    {
-        if (healthMaterial.GetFloat("_RemoveSegments") >= 3)
+        // Muerte instantanea por colision fisica con muro o agua
+        else if (other.CompareTag("muro") || other.CompareTag("Water"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            KillPlayerInstant("Colision con " + other.tag);
         }
     }
-   
+
+    private void OnTriggerEnter(Collider other)
+    {
+        // Log para probar triggers
+        Debug.Log("OnTriggerEnter con: " + other.name + " | Tag: " + other.tag);
+
+        // Muerte instantanea por trigger de muro o agua
+        if (other.CompareTag("muro") || other.CompareTag("Water"))
+        {
+            KillPlayerInstant("Trigger con " + other.tag);
+        }
+    }
+
+    private void HealthController()
+    {
+        if (healthMaterial.GetFloat("_RemoveSegments") >= maxDamageValue)
+        {
+            KillPlayerInstant("Vida agotada");
+        }
+    }
+
+    private void KillPlayerInstant(string reason)
+    {
+        Debug.Log("KillPlayerInstant -> " + reason);
+
+        if (player != null)
+        {
+            player.RespawnAtCheckpoint();
+        }
+
+        // Reset barra de vida
+        currentRemoveSegments = initialDamageValue;
+        healthMaterial.SetFloat("_RemoveSegments", currentRemoveSegments);
+    }
 }
