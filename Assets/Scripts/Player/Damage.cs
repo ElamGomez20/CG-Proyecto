@@ -44,10 +44,10 @@ public class Damage : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Log para probar triggers
+        
         Debug.Log("OnTriggerEnter con: " + other.name + " | Tag: " + other.tag);
 
-        // Muerte instantanea por trigger de muro o agua
+        
         if (other.CompareTag("muro") || other.CompareTag("Water"))
         {
             KillPlayerInstant("Trigger con " + other.tag);
@@ -71,7 +71,7 @@ public class Damage : MonoBehaviour
             player.RespawnAtCheckpoint();
         }
 
-        // Reset barra de vida
+        
         currentRemoveSegments = initialDamageValue;
         healthMaterial.SetFloat("_RemoveSegments", currentRemoveSegments);
     }

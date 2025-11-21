@@ -79,18 +79,18 @@ public class MovementPlayer : MonoBehaviour
         }
     }
 
-    // Called by checkpoints
+    
     public void SetCheckpoint(Vector3 newPosition)
     {
         respawnPosition = newPosition;
     }
 
-    // Called when player "dies"
+    
     public void RespawnAtCheckpoint()
     {
-        // Reset velocity
+        
         rb.linearVelocity = Vector3.zero;
-        // Teleport player to last checkpoint
+        
         transform.position = respawnPosition;
     }
 }

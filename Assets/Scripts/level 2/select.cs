@@ -15,7 +15,7 @@ public class select : MonoBehaviour
     private GameObject ultimoIzquierdo;
     private GameObject ultimoDerecho;
 
-    // Solo el clip, sin AudioSource
+   
     public AudioClip sonidoColocar;
     public float volumenSonido = 1f;
 
@@ -66,7 +66,7 @@ public class select : MonoBehaviour
 
         ultimo = Instantiate(prefab, posicionFinal, rotacionFinal);
 
-        // 🔊 Reproduce el sonido sin AudioSource
+        
         if (sonidoColocar != null)
         {
             AudioSource.PlayClipAtPoint(sonidoColocar, posicionFinal, volumenSonido);

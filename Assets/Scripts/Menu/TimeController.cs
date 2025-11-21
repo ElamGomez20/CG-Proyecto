@@ -31,7 +31,7 @@ public class TimeController : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Cada vez que carga una escena, el tiempo sigue corriendo
+       
         isRunning = true;
     }
 

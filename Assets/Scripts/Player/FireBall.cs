@@ -14,13 +14,13 @@ public class FireBall : MonoBehaviour
     {
         if (other.CompareTag("Monster"))
         {
-            // Contar enemigo derrotado
+            
             if (Scoreboard.Instance != null)
             {
                 Scoreboard.Instance.AddEnemyDefeated();
             }
 
-            // Destruir enemigo y la bola de fuego
+            
             Destroy(other.gameObject);
             Destroy(gameObject);
         }

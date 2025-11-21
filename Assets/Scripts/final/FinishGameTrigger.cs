@@ -17,7 +17,7 @@ public class FinishGameTrigger : MonoBehaviour
         }
         else
         {
-            FinalGameUI ui = FindObjectOfType<FinalGameUI>();
+            FinalGameUI ui = Object.FindFirstObjectByType<FinalGameUI>();
             if (ui != null)
             {
                 ui.ShowFinalPanel();

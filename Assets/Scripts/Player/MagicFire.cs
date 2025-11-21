@@ -34,7 +34,7 @@ public class MagicFire : MonoBehaviour
         if (rb != null)
         {
             rb.useGravity = false;
-            // Si en tu proyecto usas linearVelocity, mantengo este:
+            
             rb.linearVelocity = dir * speedFB;
         }
 

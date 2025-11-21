@@ -1,5 +1,10 @@
+using System.Collections;
 using UnityEngine;
 using TMPro;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class FinalGameUI : MonoBehaviour
 {
@@ -8,6 +13,8 @@ public class FinalGameUI : MonoBehaviour
     public TMP_Text txtNombre;
     public TMP_Text txtTiempo;
     public TMP_Text txtEnemigos;
+
+    public float delayToQuit = 25f;
 
     private bool alreadyShown = false;
 
@@ -86,5 +93,22 @@ public class FinalGameUI : MonoBehaviour
         {
             txtEnemigos.text = "Enemigos derrotados: " + enemigos;
         }
+
+        // Iniciar cuenta regresiva para cerrar el juego
+        StartCoroutine(QuitAfterDelay());
+    }
+
+    private IEnumerator QuitAfterDelay()
+    {
+        yield return new WaitForSeconds(delayToQuit);
+
+
+#if UNITY_EDITOR
+        EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+
+        Debug.Log("FinalGameUI: Quit game after delay");
     }
 }
