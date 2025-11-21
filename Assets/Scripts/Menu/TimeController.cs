@@ -20,11 +20,18 @@ public class TimeController : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
         SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+       
         isRunning = true;
     }
 

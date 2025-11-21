@@ -5,7 +5,7 @@ public class Damage : MonoBehaviour
     public Material healthMaterial;
     public float monsterDamage = 1f;
 
-    // Values for the health bar
+    // Valores de la barra de vida
     public float initialDamageValue = 0.02f;
     public float maxDamageValue = 3f;
 
@@ -22,12 +22,35 @@ public class Damage : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Monster"))
+        GameObject other = collision.gameObject;
+
+        // Log para probar colisiones
+        Debug.Log("OnCollisionEnter con: " + other.name + " | Tag: " + other.tag);
+
+        // Daño progresivo por fantasmas
+        if (other.CompareTag("Monster"))
         {
             currentRemoveSegments += (damageAmount + monsterDamage);
             healthMaterial.SetFloat("_RemoveSegments", currentRemoveSegments);
 
             HealthController();
+        }
+        // Muerte instantanea por colision fisica con muro o agua
+        else if (other.CompareTag("muro") || other.CompareTag("Water"))
+        {
+            KillPlayerInstant("Colision con " + other.tag);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        
+        Debug.Log("OnTriggerEnter con: " + other.name + " | Tag: " + other.tag);
+
+        
+        if (other.CompareTag("muro") || other.CompareTag("Water"))
+        {
+            KillPlayerInstant("Trigger con " + other.tag);
         }
     }
 
@@ -35,15 +58,21 @@ public class Damage : MonoBehaviour
     {
         if (healthMaterial.GetFloat("_RemoveSegments") >= maxDamageValue)
         {
-            // Player "dies"
-            if (player != null)
-            {
-                player.RespawnAtCheckpoint();
-            }
-
-            // Reset health bar
-            currentRemoveSegments = initialDamageValue;
-            healthMaterial.SetFloat("_RemoveSegments", currentRemoveSegments);
+            KillPlayerInstant("Vida agotada");
         }
+    }
+
+    private void KillPlayerInstant(string reason)
+    {
+        Debug.Log("KillPlayerInstant -> " + reason);
+
+        if (player != null)
+        {
+            player.RespawnAtCheckpoint();
+        }
+
+        
+        currentRemoveSegments = initialDamageValue;
+        healthMaterial.SetFloat("_RemoveSegments", currentRemoveSegments);
     }
 }

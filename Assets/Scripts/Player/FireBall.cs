@@ -14,14 +14,15 @@ public class FireBall : MonoBehaviour
     {
         if (other.CompareTag("Monster"))
         {
-            Destroy(other.gameObject);
-            Destroy(gameObject);
-
+            
             if (Scoreboard.Instance != null)
             {
-                Scoreboard.Instance.enemigosDerrotados++;
-                Scoreboard.Instance.GuardarDatos(); 
+                Scoreboard.Instance.AddEnemyDefeated();
             }
+
+            
+            Destroy(other.gameObject);
+            Destroy(gameObject);
         }
     }
 }
